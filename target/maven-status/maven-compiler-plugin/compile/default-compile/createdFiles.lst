@@ -1,6 +1,0 @@
-com\scanner\parser\ParsedPacket.class
-com\scanner\ui\MainWindow.class
-com\scanner\Main.class
-com\scanner\stats\StatisticsManager.class
-com\scanner\capture\NetworkSniffer.class
-com\scanner\parser\PacketParser.class
