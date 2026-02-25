@@ -28,5 +28,6 @@ A powerful tool developed with JavaFX to monitor and analyze network traffic in 
 ## Developer
 
 **Arda Meçik**
+
 You can check my GitHub profile for my projects and other works
 github.com/mecik-arda
