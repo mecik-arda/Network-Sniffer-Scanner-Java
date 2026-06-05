@@ -19,6 +19,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
@@ -151,8 +153,18 @@ public class MainWindow {
                 interfaceCombo.getItems().add(nif.getName() + " - " + nif.getDescription());
             }
             if (!nifs.isEmpty()) interfaceCombo.getSelectionModel().select(0);
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Throwable t) {
+            t.printStackTrace();
+            Platform.runLater(() -> {
+                Alert alert = new Alert(AlertType.ERROR);
+                alert.setTitle("Pcap Native Library Missing");
+                alert.setHeaderText("Packet Capture Library is Not Installed");
+                alert.setContentText("The Network Sniffer requires a native packet capture library.\n\n" +
+                                     "Windows: Install Npcap (https://npcap.com/) or WinPcap.\n" +
+                                     "Linux: Run 'sudo apt-get install libpcap-dev'\n\n" +
+                                     "Please install the library and try again.");
+                alert.showAndWait();
+            });
         }
     }
 
