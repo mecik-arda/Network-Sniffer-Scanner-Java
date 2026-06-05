@@ -1,0 +1,75 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.scanner:NetworkSniffer >---------------------
+[INFO] Building NetworkSniffer 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> javafx:0.0.8:run (default-cli) > process-classes @ NetworkSniffer >>>
+[WARNING] 6 problems were encountered while building the effective model for org.openjfx:javafx-controls:jar:win:17.0.6 during dependency collection step for project (use -X to see details)
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ NetworkSniffer ---
+[INFO] skip non existing resourceDirectory C:\Users\ardam\Desktop\Yggdrasil-Security-Framework\Runes\Network-Sniffer-Scanner-Java\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (default-compile) @ NetworkSniffer ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 6 source files to C:\Users\ardam\Desktop\Yggdrasil-Security-Framework\Runes\Network-Sniffer-Scanner-Java\target\classes
+[INFO] /C:/Users/ardam/Desktop/Yggdrasil-Security-Framework/Runes/Network-Sniffer-Scanner-Java/src/main/java/com/scanner/ui/MainWindow.java: C:\Users\ardam\Desktop\Yggdrasil-Security-Framework\Runes\Network-Sniffer-Scanner-Java\src\main\java\com\scanner\ui\MainWindow.java uses unchecked or unsafe operations.
+[INFO] /C:/Users/ardam/Desktop/Yggdrasil-Security-Framework/Runes/Network-Sniffer-Scanner-Java/src/main/java/com/scanner/ui/MainWindow.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] <<< javafx:0.0.8:run (default-cli) < process-classes @ NetworkSniffer <<<
+[INFO] 
+[INFO] 
+[INFO] --- javafx:0.0.8:run (default-cli) @ NetworkSniffer ---
+java.lang.UnsatisfiedLinkError: Unable to load library 'wpcap':
+Belirtilen modül bulunamadý.
+
+Belirtilen modül bulunamadý.
+
+Belirtilen modül bulunamadý.
+
+Native library (win32-x86-64/wpcap.dll) not found in resource path (C:\Users\ardam\Desktop\Yggdrasil-Security-Framework\Runes\Network-Sniffer-Scanner-Java\target\classes;C:\Users\ardam\.m2\repository\net\java\dev\jna\jna\5.3.1\jna-5.3.1.jar;C:\Users\ardam\.m2\repository\org\pcap4j\pcap4j-core\1.8.2\pcap4j-core-1.8.2.jar;C:\Users\ardam\.m2\repository\org\pcap4j\pcap4j-packetfactory-static\1.8.2\pcap4j-packetfactory-static-1.8.2.jar;C:\Users\ardam\.m2\repository\org\slf4j\slf4j-api\1.7.26\slf4j-api-1.7.26.jar;C:\Users\ardam\.m2\repository\org\slf4j\slf4j-simple\1.7.36\slf4j-simple-1.7.36.jar)
+	at com.sun.jna.NativeLibrary.loadLibrary(NativeLibrary.java:302)
+	at com.sun.jna.NativeLibrary.getInstance(NativeLibrary.java:455)
+	at com.sun.jna.NativeLibrary.getInstance(NativeLibrary.java:397)
+	at com.sun.jna.Function.getFunction(Function.java:102)
+	at org.pcap4j.core.NativeMappings.<clinit>(NativeMappings.java:44)
+	at org.pcap4j.core.Pcaps.findAllDevs(Pcaps.java:56)
+	at com.scanner.capture.NetworkSniffer.getInterfaces(NetworkSniffer.java:24)
+	at com.scanner.ui.MainWindow.loadInterfaces(MainWindow.java:151)
+	at com.scanner.ui.MainWindow.start(MainWindow.java:57)
+	at com.scanner.Main.start(Main.java:11)
+	at javafx.graphics/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:847)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:484)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:457)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:456)
+	at javafx.graphics/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:184)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+	Suppressed: java.lang.UnsatisfiedLinkError: Belirtilen modül bulunamadý.
+
+		at com.sun.jna.Native.open(Native Method)
+		at com.sun.jna.NativeLibrary.loadLibrary(NativeLibrary.java:191)
+		... 18 more
+	Suppressed: java.lang.UnsatisfiedLinkError: Belirtilen modül bulunamadý.
+
+		at com.sun.jna.Native.open(Native Method)
+		at com.sun.jna.NativeLibrary.loadLibrary(NativeLibrary.java:204)
+		... 18 more
+	Suppressed: java.lang.UnsatisfiedLinkError: Belirtilen modül bulunamadý.
+
+		at com.sun.jna.Native.open(Native Method)
+		at com.sun.jna.NativeLibrary.loadLibrary(NativeLibrary.java:265)
+		... 18 more
+	Suppressed: java.io.IOException: Native library (win32-x86-64/wpcap.dll) not found in resource path (C:\Users\ardam\Desktop\Yggdrasil-Security-Framework\Runes\Network-Sniffer-Scanner-Java\target\classes;C:\Users\ardam\.m2\repository\net\java\dev\jna\jna\5.3.1\jna-5.3.1.jar;C:\Users\ardam\.m2\repository\org\pcap4j\pcap4j-core\1.8.2\pcap4j-core-1.8.2.jar;C:\Users\ardam\.m2\repository\org\pcap4j\pcap4j-packetfactory-static\1.8.2\pcap4j-packetfactory-static-1.8.2.jar;C:\Users\ardam\.m2\repository\org\slf4j\slf4j-api\1.7.26\slf4j-api-1.7.26.jar;C:\Users\ardam\.m2\repository\org\slf4j\slf4j-simple\1.7.36\slf4j-simple-1.7.36.jar)
+		at com.sun.jna.Native.extractFromResourcePath(Native.java:1095)
+		at com.sun.jna.NativeLibrary.loadLibrary(NativeLibrary.java:276)
+		... 18 more
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.236 s
+[INFO] Finished at: 2026-06-05T23:52:18+03:00
+[INFO] ------------------------------------------------------------------------

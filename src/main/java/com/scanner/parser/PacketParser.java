@@ -65,7 +65,7 @@ public class PacketParser {
         if (srcPort.equals("80") || dstPort.equals("80") || srcPort.equals("8080") || dstPort.equals("8080")) {
             byte[] payload = tcpPacket.getPayload() != null ? tcpPacket.getPayload().getRawData() : new byte[0];
             if (payload.length > 0) {
-                String payloadStr = new String(payload);
+                String payloadStr = new String(payload, java.nio.charset.StandardCharsets.UTF_8);
                 if (payloadStr.startsWith("GET ") || payloadStr.startsWith("POST ")) {
                     String[] lines = payloadStr.split("\r\n");
                     return "HTTP " + lines[0];
